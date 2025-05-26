@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Heroheader": {
+      "type": "string"
+    },
+    "Herotext": {
+      "type": "string"
+    },
+    "Education": {
+      "displayName": "Education",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.education"
+    },
+    "Team": {
+      "displayName": "Team",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.team"
+    },
+    "Gallery": {
+      "displayName": "Gallery",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.gallery"
+    },
+    "Contact": {
+      "displayName": "Contact",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.contact"
+    }
+  }
+}

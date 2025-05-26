@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_teams",
+  "info": {
+    "displayName": "Team"
+  },
+  "options": {},
+  "attributes": {
+    "Teamheader": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Employees": {
+      "displayName": "Employees",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.employees"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_shared_educations",
+  "info": {
+    "displayName": "Education",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Header": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Price": {
+      "type": "string"
+    },
+    "Icon": {
+      "type": "enumeration",
+      "enum": [
+        "home",
+        "information-circle",
+        "phone",
+        "envelope",
+        "calendar-days",
+        "bolt",
+        "trophy",
+        "chart-bar",
+        "user-group",
+        "user",
+        "identification",
+        "clipboard-document-check",
+        "credit-card",
+        "clock",
+        "map-pin",
+        "globe-alt",
+        "newspaper",
+        "cog-6-tooth",
+        "droplet",
+        "water",
+        "swimmer",
+        "child"
+      ]
+    }
+  }
+}

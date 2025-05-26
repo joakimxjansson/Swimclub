@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_contactinfos",
+  "info": {
+    "displayName": "Contactinfo",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Icon": {
+      "type": "enumeration",
+      "enum": [
+        "home",
+        "Envelope",
+        "clock",
+        "mapMarkerAlt",
+        "phone"
+      ]
+    },
+    "Property": {
+      "type": "string"
+    },
+    "Propertyinfo": {
+      "type": "string"
+    }
+  }
+}

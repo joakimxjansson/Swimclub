@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_sponsors",
+  "info": {
+    "displayName": "Sponsors",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Sponsorimage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Sponsorlink": {
+      "type": "string",
+      "required": true,
+      "default": "/#home"
+    }
+  }
+}

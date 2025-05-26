@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_employees",
+  "info": {
+    "displayName": "Employees"
+  },
+  "options": {},
+  "attributes": {
+    "Employeeavatar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Employeename": {
+      "type": "string"
+    },
+    "Proffession": {
+      "type": "string"
+    },
+    "About": {
+      "type": "string"
+    }
+  }
+}
