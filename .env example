@@ -1,0 +1,11 @@
+# .env
+NEXT_PUBLIC_SERVER_FORM_URL=http://localhost:5000/submit-form
+
+# Backend vars
+FORM_URL=https://docs.google.com/forms/your-form-id/formResponse
+ENTRY_NAME=entry.YOUR_FIRSTNAME_ID_HERE
+ENTRY_LASTNAME=entry.YOUR_LASTNAME_ID_HERE
+ENTRY_PHONE=entry.YOUR_PHONE_ID_HERE
+ENTRY_EMAIL=entry.YOUR_EMAIL_ID_HERE
+ENTRY_MESSAGE=entry.YOUR_MESSAGE_ID_HERE
+ENTRY_SERVICE=entry.YOUR_SERVICE_ID_HERE

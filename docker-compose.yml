@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./Swimclub
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    depends_on:
+      - backend
+      - strapi
+    environment:
+      - NEXT_PUBLIC_SERVER_FORM_URL=${NEXT_PUBLIC_SERVER_FORM_URL}
+    volumes:
+      - ./Swimclub:/app
+      - node_modules_frontend:/app/node_modules
+
+  backend:
+    build:
+      context: ./form-server
+      dockerfile: Dockerfile
+    command: node server.js
+    ports:
+      - '5000:5000'
+   
+    environment:
+      - FORM_URL=${FORM_URL}
+      - ENTRY_FIRSTNAME=${ENTRY_FIRSTNAME}
+      - ENTRY_LASTNAME=${ENTRY_LASTNAME}
+      - ENTRY_PHONE=${ENTRY_PHONE}
+      - ENTRY_EMAIL=${ENTRY_EMAIL}
+      - ENTRY_MESSAGE=${ENTRY_MESSAGE}
+      - ENTRY_SERVICE=${ENTRY_SERVICE}
+    volumes:
+      - ./form-server:/app
+      - node_modules_backend:/app/node_modules
+
+  strapi:
+    build:
+      context: ./swimclub-strapi
+    ports:
+      - '1338:1338'
+    volumes:
+      - ./swimclub-strapi:/app
+      - node_modules_strapi:/app/node_modules
+      - ./swimclub-strapi/.tmp:/app/.tmp       # Mappa .tmp-mappen med databasen
+    environment:
+      - DATABASE_CLIENT=sqlite
+      - DATABASE_FILENAME=./.tmp/data.db        # Peka mot .tmp/data.db
+    command: npm run develop
+
+
+volumes:
+  node_modules_frontend:
+  node_modules_backend:
+  node_modules_strapi:
