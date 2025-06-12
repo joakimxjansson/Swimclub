@@ -1,5 +1,5 @@
 export async function getGlobalData() {
-    const res = await fetch("http:/127.0.0.1:1337/api/global?populate[Navbar][populate]=Logo&populate[Footer][populate][Sponsors][populate]=Sponsorimage", {
+    const res = await fetch("http://strapi:1338/api/global?populate[Navbar][populate]=Logo&populate[Footer][populate][Sponsors][populate]=Sponsorimage", {
         headers: {
             "Content-Type": "application/json",
         },
@@ -14,7 +14,7 @@ export async function getGlobalData() {
 }
 
 export async function getHomepageData() {
-    const res = await fetch("http://127.0.0.1:1337/api/homepage?populate=Team.Employees.Employeeavatar&populate=Education&populate=Gallery.Image&populate=Contact.Contactinfo", {
+    const res = await fetch("http://strapi:1338/api/homepage?populate=Team.Employees.Employeeavatar&populate=Education&populate=Gallery.Image&populate=Contact.Contactinfo", {
         headers: {
             "Content-Type": "application/json",
         },
@@ -29,7 +29,7 @@ export async function getHomepageData() {
 }
 
 export async function getLatestNews() {
-    const res = await fetch("http://127.0.0.1:1337/api/newsid?populate=image", {
+    const res = await fetch("http://strapi:1338/api/newsid?populate=image", {
         headers: {
             "Content-Type": "application/json",
         },
@@ -42,7 +42,7 @@ export async function getLatestNews() {
 }
 
 export async function getNewsBySlug(slug: string) {
-    const res = await fetch(`http://127.0.0.1:1337/api/newsid?filters[link][$eq]=${slug}&populate=image`)
+    const res = await fetch(`http://strapi:1338/api/newsid?filters[link][$eq]=${slug}&populate=image`)
     const json = await res.json()
     return json.data[0] // Strapi returnerar alltid en array vid filter
 }
@@ -51,7 +51,7 @@ export async function getNewsBySlug(slug: string) {
 
 
     export async function getAboutpageData() {
-        const res = await fetch("http://127.0.0.1:1337/api/about?populate=*", {
+        const res = await fetch("http://strapi:1338/api/about?populate=*", {
             headers: {
                 "Content-Type": "application/json",
             },
