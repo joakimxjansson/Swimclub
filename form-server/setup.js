@@ -9,16 +9,16 @@ const rl = readline.createInterface({
 const ask = (q) => new Promise((res) => rl.question(q, res));
 
 (async () => {
-    console.log("👋 Välkommen till Google Form Setup!");
+    console.log(" Välkommen till Google Form Setup!");
 
-    const formUrl = await ask("1️⃣ Klistra in din Google Forms action-URL:\n> ");
-    const numFields = parseInt(await ask("\n2️⃣ Hur många fält vill du använda?\n> "), 10);
+    const formUrl = await ask("1 Klistra in din Google Forms action-URL:\n> ");
+    const numFields = parseInt(await ask("\n Hur många fält vill du använda?\n> "), 10);
 
     const fields = [];
 
     for (let i = 0; i < numFields; i++) {
-        const name = await ask(`\n👉 Vad heter fält ${i + 1} (t.ex. firstname)?\n> `);
-        const entry = await ask(`📝 Vad är entry-ID:t för "${name}" (t.ex. entry.123456)?\n> `);
+        const name = await ask(`\n Vad heter fält ${i + 1} (t.ex. firstname)?\n> `);
+        const entry = await ask(` Vad är entry-ID:t för "${name}" (t.ex. entry.123456)?\n> `);
         fields.push({ name, entry });
     }
 
@@ -28,7 +28,7 @@ const ask = (q) => new Promise((res) => rl.question(q, res));
         envContent += `ENTRY_${f.name.toUpperCase()}=${f.entry}\n`;
     });
     fs.writeFileSync('.env', envContent);
-    console.log("\n✅ Filen .env skapades!");
+    console.log("\n Filen .env skapades!");
 
     // Skriv formConfig.js (valfritt)
     const configJs = `module.exports = {\n` +
